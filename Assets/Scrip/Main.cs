@@ -10,19 +10,19 @@ public class Main : MonoBehaviour
         Debug.Log("Welcome to Arizona Farm");
         Debug.Log($"Dragon and Hydra are living in the farm");
         Debug.Log($"=== Dragon ===");
-        chicken.ShowStats();
+        chicken.Getstatus();
         chicken.MakeSound();
         chicken.Feed("corn");
-        chicken.ShowStats();
+        chicken.Getstatus();
         chicken.Sleep();
-        chicken.ShowStats();
+        chicken.Getstatus();
 
         Debug.Log($"=== Hydra ===");
-        cow.ShowStats();
-        cow.Feed("grass");
-        cow.Sleep();
+        cow.Getstatus();
         cow.Moo();
-        cow.ShowStats();
+        cow.Feed("grass");
+        cow.MakeSound();
+        cow.Getstatus();
 
         Debug.Log("Goodbye");
     }

@@ -70,20 +70,19 @@ public class Cow : MonoBehaviour
         AdjustHappiness(+5);
     }
 
-    public void Sleep()
+    public void MakeSound()
     {
-        Debug.Log($"{Name} is sleeping...");
-        AdjustHunger(+5);
+        Debug.Log($"{Name} says: มู้ววววววววววว~~~~~~~~~~~");
         AdjustHappiness(+10);
+        
     }
 
     public void Moo()
     {
-        Debug.Log($"{Name} says: มออออออ");
-        AdjustHappiness(+10);
+        Debug.Log($"{Name} says: มออออออ ");
     }
 
-    public void ShowStats()
+    public void Getstatus()
     {
         Debug.Log($"[Cow] Name:{Name} | Hunger:{Hunger} | Happiness:{Happiness} | Milk:{Milk}");
     }

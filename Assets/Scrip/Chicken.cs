@@ -83,7 +83,7 @@ public class Chicken : MonoBehaviour
         Debug.Log($"{Name} says: µéÒ¡ææææ ");
     }
 
-    public void ShowStats()
+    public void Getstatus()
     {
         Debug.Log($"[Chicken] Name:{Name} | Hunger:{Hunger} | Happiness:{Happiness} | Eggs:{Eggs}");
     }
