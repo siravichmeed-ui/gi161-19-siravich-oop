@@ -56,13 +56,11 @@ public class Cow : MonoBehaviour
     public void AdjustHunger(int amount)
     {
         Hunger += amount;
-        Debug.Log($"{Name}'s Hunger = {Hunger}");
     }
 
     public void AdjustHappiness(int amount)
     {
-        Happiness += amount;
-        Debug.Log($"{Name}'s Happiness = {Happiness}");
+        Happiness += amount; 
     }
 
     public void Feed(string food)
@@ -81,7 +79,7 @@ public class Cow : MonoBehaviour
 
     public void Moo()
     {
-        Debug.Log($"{Name} says: Moo Moo!");
+        Debug.Log($"{Name} says: มออออออ");
         AdjustHappiness(+10);
     }
 

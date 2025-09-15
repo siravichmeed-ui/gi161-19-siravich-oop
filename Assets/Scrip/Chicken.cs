@@ -55,13 +55,13 @@ public class Chicken : MonoBehaviour
     public void AdjustHunger(int amount)
     {
         Hunger += amount;
-        Debug.Log($"{Name}'s Hunger = {Hunger}");
+        
     }
 
     public void AdjustHappiness(int amount)
     {
         Happiness += amount;
-        Debug.Log($"{Name}'s Happiness = {Happiness}");
+        
     }
 
     public void Feed(string food)
@@ -80,7 +80,7 @@ public class Chicken : MonoBehaviour
 
     public void MakeSound()
     {
-        Debug.Log($"{Name} says: Cluck Cluck!");
+        Debug.Log($"{Name} says: µéÒ¡ææææ ");
     }
 
     public void ShowStats()
