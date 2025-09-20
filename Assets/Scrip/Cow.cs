@@ -1,89 +1,34 @@
 using UnityEngine;
 
-public class Cow : MonoBehaviour
+public class Cow : Animal
 {
-    private string name;
-    public string Name
-    {
-        get { return name; }
-        set
-        {
-            if (string.IsNullOrEmpty(value)) { name = "Cow"; }
-            else name = value;
-        }
-    }
-    private int hunger;
-    public int Hunger
-    {
-        get { return hunger; }
-        set
-        {
-            if (value < 0) hunger = 0;
-            else if (value > 50) hunger = 50;
-            else hunger = value;
-        }
-    }
-    private int happiness;
-    public int Happiness
-    {
-        get { return happiness; }
-        set
-        {
-            if (value < 0) happiness = 0;
-            else if (value > 50) happiness = 50;
-            else happiness = value;
-        }
-    }
+
     private float milk;
     public float Milk
     {
         get { return milk; }
-        private set
+        set
         {
-            if (value < 0) milk = 0;
-            else milk = value;
+            if (value >= 0) milk = value;
+            else milk = 0;
         }
     }
-    public Cow(string newName, int newHG, int newHPN, float newMilk)
+
+    
+    public override void MakeSound()
     {
-        Name = newName;
-        hunger = newHG;
-        happiness = newHPN;
-        milk = newMilk;
+
+        Debug.Log($"{Name} say Moo!");
     }
 
-    // Methods
-    public void AdjustHunger(int amount)
+    public override void SpecialAction()
     {
-        Hunger += amount;
-    }
+        base.SpecialAction();
+        Debug.Log($"{Name} gives a loud MooMooMoo| current Happiness: {Happiness}");
+        AdjustHunger(5);
+        AdjustHappiness(10);
+    }   
 
-    public void AdjustHappiness(int amount)
-    {
-        Happiness += amount; 
-    }
+    
 
-    public void Feed(string food)
-    {
-        Debug.Log($"{Name} eats {food}");
-        AdjustHunger(-10);
-        AdjustHappiness(+5);
-    }
-
-    public void MakeSound()
-    {
-        Debug.Log($"{Name} says: ¡ŸÈ«««««««««««~~~~~~~~~~~");
-        AdjustHappiness(+10);
-        
-    }
-
-    public void Moo()
-    {
-        Debug.Log($"{Name} says: ¡ÕÕÕÕÕÕ ");
-    }
-
-    public void Getstatus()
-    {
-        Debug.Log($"[Cow] Name:{Name} | Hunger:{Hunger} | Happiness:{Happiness} | Milk:{Milk}");
-    }
 }
