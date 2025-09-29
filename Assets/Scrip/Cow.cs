@@ -41,7 +41,7 @@ public class Cow : Animal
         int units = Happiness / 10;
         TotalMilk += units;
         
-        return $"{Name} produced 10 liters of milk. Total milk: {TotalMilk} liters.";
+        return $"{Name} produced {units} liters of milk. Total milk: {TotalMilk} liters.";
     }
 
 }

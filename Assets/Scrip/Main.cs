@@ -44,12 +44,48 @@ public class Main : MonoBehaviour
             animal.MakeSound();
             animal.Feed(5);
         }
-
+        //chick
         animals[0].Feed(10);
+        
         animals[0].Feed(FoodTypes.Grain, 5);
         Debug.Log(animals[0].ProduceProduct());
         animals[0].Feed(FoodTypes.Grain, 5);
         Debug.Log(animals[0].ProduceProduct());
+        animals[0].Feed(FoodTypes.Grain, 5);
+        Debug.Log(animals[0].ProduceProduct());
+        animals[0].Feed(FoodTypes.RottenFood, 5);
+        Debug.Log(animals[0].ProduceProduct());
+        animals[0].Feed(FoodTypes.RottenFood, 10);
+        Debug.Log(animals[0].ProduceProduct());
+        //cow
+        animals[1].Feed(FoodTypes.Hay, 10);
+        Debug.Log(animals[1].ProduceProduct());
+        animals[1].Feed(FoodTypes.RottenFood, 10);
+        Debug.Log(animals[1].ProduceProduct());
+        animals[1].Feed(FoodTypes.RottenFood, 10);
+        Debug.Log(animals[1].ProduceProduct());
+        //piggy
+        animals[2].Feed(FoodTypes.Carrot, 10);
+        Debug.Log(animals[2].ProduceProduct());
+        animals[2].Feed(FoodTypes.Carrot, 10);
+        Debug.Log(animals[2].ProduceProduct());
+        animals[2].Feed(FoodTypes.Carrot, 10);
+        Debug.Log(animals[2].ProduceProduct());
+        animals[2].Feed(FoodTypes.Carrot, 10);
+        Debug.Log(animals[2].ProduceProduct());
+
+        animals[1].Feed(FoodTypes.AnimalFood, 10);
+        Debug.Log(animals[1].ProduceProduct());
+        animals[1].Feed(FoodTypes.RottenFood, 10);
+        Debug.Log(animals[1].ProduceProduct());
+
+
+        foreach (var animal in animals)
+        {
+            animal.ShowStatus();
+
+        }
+
 
 
         /*//chick

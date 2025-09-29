@@ -24,7 +24,7 @@ public class Chicken : Animal
     public override void MakeSound()
     {
 
-        Debug.Log($"{Name} say Cluck Cluck!");
+        Debug.Log($"{Name} say eak e eak eakkkk!");
     }
 
 

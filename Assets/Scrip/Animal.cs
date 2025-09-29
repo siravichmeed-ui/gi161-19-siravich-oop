@@ -54,7 +54,7 @@ public abstract class Animal : MonoBehaviour
         if (type == FoodTypes.RottenFood)
         {
             AdjustHappiness(-20);
-            Debug.Log($"{Name} got RottenFood! Happiness now {Happiness}.");
+            Debug.Log($"{Name} got RottenFood! -20 Happiness now {Happiness}.");
             return;
         }
 
